@@ -1,0 +1,321 @@
+body {
+    background-color: var(--edu-promo-bg-main);
+    
+    --edu-promo-bg-main: #222;
+    --edu-promo-text-color: #fff;
+    --edu-promo-text-color-light: #000;
+    --edu-promo-hero-bg: #111;
+    --edu-promo-mix-blend-mode: multiply;
+    
+    font-family: roboto, sans-serif;
+    color: var(--edu-promo-text-color);
+}
+body.light {
+    --edu-promo-bg-main: #f8f8f8;
+    --edu-promo-text-color: #000;
+    --edu-promo-text-color-light: #fff;
+    --edu-promo-hero-bg: #eaeaea;
+    --edu-promo-mix-blend-mode: screen;
+}
+.navBar {
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+}
+.navBar .innerContent {
+    display: flex;
+    justify-content: space-between;
+}
+.innerContent {
+    max-width: 1000px;
+    width: calc(100% - 50px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100%;
+}
+.brandBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    color: var(--edu-promo-text-color);
+}
+.actionBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    color: var(--edu-promo-text-color);
+}
+.cta-btn {
+    border: 2px solid var(--edu-promo-text-color);
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: manrope, roboto, sans-serif;
+    font-size: 1em;
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--edu-promo-text-color);
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: 0.1s ease-in-out;
+    letter-spacing: 1px;
+}
+.cta-btn:hover {
+    color: var(--edu-promo-text-color-light);
+}
+.cta-btn:active {
+    color: var(--edu-promo-text-color);
+}
+.cta-btn::before {
+    content: "";
+    height: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--edu-promo-text-color);
+    transition: 0.1s ease-in-out;
+    z-index: -1;
+    border-radius: 2px;
+}
+.cta-btn:hover::before {
+    height: 100%;
+    border-radius: 0;
+}
+.cta-btn:active::before {
+    height: 0;
+    bottom: 100%;
+    border-radius: 0;
+}
+.brandBox img {
+    height: 40px;
+    width: auto;
+    position: relative;
+    margin-right: 20px;
+}
+.brandBox span {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: manrope, roboto, sans-serif;
+}
+.contentShowcase {
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.promoImg {
+    width: 800px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.1);
+    position: relative;
+    margin-bottom: 25px;
+}
+.promoImgContainer {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateY(200px) translateX(-50%);
+    height: auto;
+    width: auto;
+    padding-bottom: 25px;
+}
+.heroBox {
+    height: auto;
+    background-color: var(--edu-promo-hero-bg);
+    min-height: 500px;
+    position: relative;
+    text-align: center;
+    color: var(--edu-promo-text-color);
+    padding-top: 110px;
+    background-image: url("../img/exampleImg.png");
+    background-blend-mode: var(--edu-promo-mix-blend-mode);
+    margin-bottom: 670px;
+}
+.heroBox h1 {
+    font-family: manrope, roboto, sans-serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+.heroBox p {
+    font-family: roboto, sans-serif;
+    font-size: 1.2em;
+    max-width: 600px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.promoImgControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promoImgControl button {
+    border: none;
+    background-color: transparent;
+    margin: 4px;
+    border-radius: 3px;
+    padding: 8px;
+    text-align: center;
+    color: var(--edu-promo-text-color);
+    font-size: 1.6em;
+    cursor: pointer;
+    height: 1.8em;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.1s ease-in-out;
+    font-family: manrope, roboto, sans-serif;
+}
+.promoImgControl button.selected {
+    background-color: #5281e7;
+    width: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-shadow: 0 2px 6px 0 #5281e755, 0 8px 16px 0 #5281e766;
+}
+.light .promoImgControl button.selected {
+    color: var(--edu-promo-text-color-light);
+}
+.promoImgControl button i.ph {
+    transition: 0.1s ease-in-out;
+}
+.promoImgControl button.selected i.ph {
+    margin-right: 14px;
+}
+.promoImgControl button span {
+    font-size: 0;
+    transition: 0.1s ease-in-out;
+}
+.promoImgControl button.selected span {
+    font-size: 0.6em;
+    letter-spacing: 1px;
+}
+.promoImgDescriptionTexts {
+    min-height: 275px;
+    padding-top: 15px;
+    font-family: manrope;
+}
+.promoImgDescriptionTexts div {
+    display: none;
+}
+.promoImgDescriptionTexts div.selected {
+    display: block;
+}
+.promoImgDescriptionTexts p {
+    font-family: manrope;
+    max-width: 650px;
+    width: 100%;
+    text-align: justify;
+    position: relative;
+}
+
+h2 {
+    font-family: manrope;
+    text-align: center;
+    font-size: 2em;
+}
+
+.smartphoneBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+.smartphoneBox h2 {
+    text-align: start;
+    margin-top: 5px;
+}
+.smartphoneBox p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+.smartphone {
+    padding: 25px;
+    padding-top: 0;
+    margin-right: 25px;
+}
+
+.smartphone-case {
+    width: 15em;
+    height: 26em;
+    background-color: #5281e7;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.1);
+    position: relative;
+}
+.smartphone-frame {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    margin: 3px;
+    top: 3px;
+    border-radius: 8px;
+    background-image: linear-gradient(45deg, #444, #666);
+    position: relative;
+}
+.smartphone-glass {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    top: 5px;
+    border-radius: 6px;
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
+}
+.smartphone-glass::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(-25deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0.3) 60%, 
+        rgba(255,255,255,0.05) 100%);
+    top: 0;
+    z-index: 0;
+    display: none;
+}
+.smartphone-bezel-top {
+    width: 100%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.smartphone-screen {
+    width: calc(100% - 14px);
+    margin-left: 7px;
+    border-radius: 3px;
+    height: calc(100% - 3em);
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+.smartphone-screen img {
+    width: 100%;
+    height: auto;
+}
+.smartphone-bezel-cam {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.smartphone-bezel-mic {
+    height: 6px;
+    width: 36px;
+    background-color: #000;
+    border-radius: 3px;
+}
