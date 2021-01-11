@@ -240,6 +240,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     padding-top: 25px;
+    flex-wrap: wrap;
 }
 .smartphoneBox h2 {
     text-align: start;
