@@ -131,6 +131,7 @@ body.light {
     height: auto;
     width: auto;
     padding-bottom: 25px;
+    max-width: 100%;
 }
 .heroBox {
     height: auto;
