@@ -1,3 +1,174 @@
-<html>
-
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mercury</title>
+        
+        <link rel="stylesheet" href="../res/style/home.css">
+        <link rel="stylesheet" href="../res/fonts/phosphor-icons/font/CSS/phosphor.css">
+        
+        <script defer>
+            let imgCtrlBtns;
+            let imgDescrs;
+            window.onload = function() {
+                let imgCtrl = document.getElementById("imgControl");
+                imgCtrlBtns = imgCtrl.children;
+                imgDescrs = document.getElementById("promoImgDescriptions").children;
+                for (let i = 0; i < imgCtrlBtns.length; i++) {
+                    imgCtrlBtns[i].addEventListener("click", function (e) {
+                        selectCtrlBtn(i, this);
+                    });
+                }
+            }
+            
+            
+            function selectCtrlBtn(num, el) {
+                el.classList.add("selected");
+                for (let btn of imgCtrlBtns) {
+                    if (btn !== el) {
+                        btn.classList.remove("selected");
+                    }
+                }
+                imgDescrs[num].classList.add("selected");
+                for (let i = 0; i < imgDescrs.length; i++) {
+                    if (i !== num) {
+                        imgDescrs[i].classList.remove("selected");
+                    }
+                }
+            }
+        </script>
+	</head>
+	<body class="light">
+        <nav class="navBar">
+            <div class="innerContent">
+                <div class="brandBox">
+                    <img src="../res/icons/mercury_144.png" alt="Mercury Icon">
+                    <span>Mercury</span>
+                </div>
+                <div class="actionBox">
+                    <button class="cta-btn">Demo</button>
+                </div>
+            </div>
+        </nav>
+        <div class="contentShowcase">
+            <div class="heroBox">
+                <div class="innerContent">
+                    <h1>Einfach zusammenarbeiten.</h1>
+                    <p>Mit konfigurierbaren Gruppenchats, einem automatischen Kalender, Cloudspeicher und einer globalen Suchfunktion</p>
+                    <div class="promoImgContainer">
+                        <img class="promoImg" src="../res/img/chatsview.png" alt="Chats">
+                        <div class="promoImgControl" id="imgControl">
+                            <button class="selected">
+                                <i class="ph ph-chats"></i>
+                                <span>CHATS</span>
+                            </button>
+                            <button>
+                                <i class="ph ph-calendar-blank"></i>
+                                <span>KALENDER</span>
+                            </button>
+                            <button>
+                                <i class="ph ph-folder-open"></i>
+                                <span>CLOUD</span>
+                            </button>
+                            <button>
+                                <i class="ph ph-clipboard-text"></i>
+                                <span>AUFGABEN</span>
+                            </button>
+                            <button>
+                                <i class="ph ph-magnifying-glass"></i>
+                                <span>SUCHE</span>
+                            </button>
+                            <button>
+                                <i class="ph ph-rows"></i>
+                                <span>WIDGETS</span>
+                            </button>
+                        </div>
+                        <div class="promoImgDescriptionTexts" id="promoImgDescriptions">
+                            <div class="selected">
+                                <p>
+                                    Gruppenchats bieten eine einfache und schnelle Möglichkeit, mit Ihrer gesamten Gruppe zu kommunizieren. Egal, ob Sie mit Ihrer Familie einen Ausflug planen, Ihren Kollegen etwas mitteilen möchten oder Schüler unterrichten. Senden Sie Fotos, Videos und andere Dateien oder heben Sie die Stimmung mit einem Sticker.
+                                </p>
+                                <p>
+                                    Als Administrator einer Gruppe können Sie festlegen, was Mitglieder senden dürfen und sogar Ruhezeiten bestimmen, während denen nichts geschrieben werden kann.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Der integrierte, automatisch erstellte Kalender sorgt dafür, dass Sie nie wieder Aufgaben manuell eintragen und sie dann selbst als erledigt kennzeichnen müssen. Mercury erledigt all das für Sie.
+                                </p>
+                                <p>
+                                    Erstellt jemand eine Aufgabe mit Frist für Ihre Gruppe, wird sie automatisch in den Kalender eingetragen. Das gleiche geschieht bei Bekanntmachungen.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Dateien freigeben und verwalten: Wenn Sie etwas mit anderen teilen möchten, laden Sie es einfach hoch und schon ist es für alle verfügbar. Mit dem umfassenden Rechtesystem können Sie genau festlegen, wer Zugriff auf Ihre Dateien erhält.
+                                </p>
+                                <p>
+                                    Mit den enthaltenen Dateiwerkzeugen können Sie ganz einfach aufräumen und Ihren Speicher strukturieren.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Aufgaben verteilen und verwalten: Für Bildungseinrichtungen bietet Mercury ein einfach zu bedienendes und dennoch vielseitiges Aufgabensystem. Geben Sie direkt Rückmeldungen, erhalten Sie Benachrichtigung über abgegebene Lösungen und behalten Sie den Überblick mit der Integration in den Kalender.
+                                </p>
+                                <p>
+                                    Auch für private Haushalte können Aufgaben nützlich sein: Was muss wann getan werden?
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Finden Sie alles, wann immer Sie wollen. Die globale Suche, mit der Sie Dateien, Gruppen, Nachrichten, Kalendereinträge und Aufgaben ganz einfach finden können, ist immer nur einen Klick oder einen Shortcut entfernt.
+                                </p>
+                                <p>
+                                    Möchten Sie genau steuern, was Sie suchen? Mit der erweiterten Suche legen Sie Filter fest und kommen so präzise zum Ziel.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Steuern Sie die Medienwiedergabe, überprüfen Sie anstehende Aufgaben und antworten Sie sofort auf Nachrichten - mit Widgets können Sie von jedem Bildschirm aus sofort das Heft in die Hand nehmen.
+                                </p>
+                                <p>
+                                    Widgets erscheinen immer dann automatisch, wenn Sie sie benötigen: Wenn eine Mediendatei abgespielt wird, erscheint ein Medienwidget, wenn Sie in einer Nachricht erwähnt werden, sehen Sie ein Widget, um schnell zu antworten. So können Sie sich voll und ganz auf das konzentrieren, was sie gerade tun.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="contentBox">
+                <div class="innerContent">
+                    
+                    <div class="smartphoneBox">
+                        <div class="smartphone">
+                            <div class="smartphone-case">
+                                <div class="smartphone-frame">
+                                    <div class="smartphone-glass">
+                                        <div class="smartphone-bezel-top">
+                                            <div class="smartphone-bezel-cam"></div>
+                                            <div class="smartphone-bezel-mic"></div>
+                                        </div>
+                                        <div class="smartphone-screen">
+                                            <img src="../res/img/mobilescreen.png" alt="Mercury auf einem Smartphone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Überall nutzen.</h2>
+                            <p>
+                                Als webbasierte Software läuft Mercury auf jedem Gerät, das einen modernen Browser unterstützt - nutzen Sie Mercury mit Windows, macOS, Linux, Android, iOS (und überall, wo man Firefox, Chrome oder Safari nutzen kann).
+                            </p>
+                            <p>
+                                Mercury wurde von Grund auf als Progressive Web App (PWA) entwickelt und lässt sich daher auf Ihren Geräten wie eine normale App installieren und offline nutzen. Ziehen Sie es vor, Mercury im Browser zu nutzen, steht Ihnen diese Option natürlich auch offen.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+	</body>
 </html>
