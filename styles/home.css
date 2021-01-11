@@ -148,6 +148,7 @@ body.light {
     font-family: manrope, roboto, sans-serif;
     font-size: 3em;
     margin-bottom: 1em;
+    word-wrap: anywhere;
 }
 .heroBox p {
     font-family: roboto, sans-serif;
