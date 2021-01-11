@@ -164,6 +164,9 @@ body.light {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 18px;
 }
 .promoImgControl button {
     border: none;
@@ -182,6 +185,7 @@ body.light {
     align-items: center;
     transition: 0.1s ease-in-out;
     font-family: manrope, roboto, sans-serif;
+    flex-shrink: 0;
 }
 .promoImgControl button.selected {
     background-color: #5281e7;
