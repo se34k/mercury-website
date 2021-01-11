@@ -157,7 +157,7 @@ body.light {
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    width: calc(100% - 20px);
+    width: 100%;
 }
 
 .promoImgControl {
