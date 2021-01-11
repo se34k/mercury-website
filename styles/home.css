@@ -161,12 +161,14 @@ body.light {
 }
 
 .promoImgControl {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
     overflow-y: visible;
     padding-bottom: 18px;
+    width: auto;
+    max-width: 100%;
 }
 .promoImgControl button {
     border: none;
