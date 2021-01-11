@@ -4,39 +4,39 @@
 		<meta charset="UTF-8">
 		<title>Mercury</title>
         
-        <link rel="stylesheet" href="styles/home.css">
-	<script src="https://unpkg.com/phosphor-icons"></script>
+       		<link rel="stylesheet" href="styles/home.css">
+		<script src="https://unpkg.com/phosphor-icons"></script>
         
-        <script defer>
-            let imgCtrlBtns;
-            let imgDescrs;
-            window.onload = function() {
-                let imgCtrl = document.getElementById("imgControl");
-                imgCtrlBtns = imgCtrl.children;
-                imgDescrs = document.getElementById("promoImgDescriptions").children;
-                for (let i = 0; i < imgCtrlBtns.length; i++) {
-                    imgCtrlBtns[i].addEventListener("click", function (e) {
-                        selectCtrlBtn(i, this);
-                    });
-                }
-            }
-            
-            
-            function selectCtrlBtn(num, el) {
-                el.classList.add("selected");
-                for (let btn of imgCtrlBtns) {
-                    if (btn !== el) {
-                        btn.classList.remove("selected");
-                    }
-                }
-                imgDescrs[num].classList.add("selected");
-                for (let i = 0; i < imgDescrs.length; i++) {
-                    if (i !== num) {
-                        imgDescrs[i].classList.remove("selected");
-                    }
-                }
-            }
-        </script>
+		<script defer>
+		    let imgCtrlBtns;
+		    let imgDescrs;
+		    window.onload = function() {
+			let imgCtrl = document.getElementById("imgControl");
+			imgCtrlBtns = imgCtrl.children;
+			imgDescrs = document.getElementById("promoImgDescriptions").children;
+			for (let i = 0; i < imgCtrlBtns.length; i++) {
+			    imgCtrlBtns[i].addEventListener("click", function (e) {
+				selectCtrlBtn(i, this);
+			    });
+			}
+		    }
+
+
+		    function selectCtrlBtn(num, el) {
+			el.classList.add("selected");
+			for (let btn of imgCtrlBtns) {
+			    if (btn !== el) {
+				btn.classList.remove("selected");
+			    }
+			}
+			imgDescrs[num].classList.add("selected");
+			for (let i = 0; i < imgDescrs.length; i++) {
+			    if (i !== num) {
+				imgDescrs[i].classList.remove("selected");
+			    }
+			}
+		    }
+		</script>
 	</head>
 	<body class="light">
         <nav class="navBar">
